@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>فعل مضارع - Present Tense Learning Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        
+        <!-- Header Section -->
+        <header>
+            <div class="header-top">
+                <div class="app-title-wrapper">
+                    <h1 class="app-title">فِعْلٌ مُضَارِعٌ</h1>
+                    <span class="app-subtitle malayalam-font">വർത്തമാനകാല ക്രിയകൾ പഠിക്കാം!</span>
+                </div>
+                <div class="stats-badge-container">
+                    <div class="stat-item stars" id="header-stars-badge">
+                        <svg viewBox="0 0 24 24" width="16" height="16">
+                            <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                        </svg>
+                        <span id="header-star-count">0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="progress-bar-container" title="നിങ്ങളുടെ പഠന പുരോഗതി">
+                <div class="progress-fill" id="header-progress-fill"></div>
+            </div>
+        </header>
+
+        <!-- Navigation Tabs -->
+        <nav class="nav-tabs">
+            <button class="tab-btn active" data-tab="study" id="tab-btn-study">
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5.47 18.6l6.53 3.56 6.53-3.56v-2.67l-6.53 3.56-6.53-3.56v2.67z"/>
+                </svg>
+                <span class="malayalam-font">പഠിക്കാം</span>
+            </button>
+            <button class="tab-btn" data-tab="practice" id="tab-btn-practice">
+                <svg viewBox="0 0 24 24">
+                    <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
+                </svg>
+                <span class="malayalam-font">പരിശീലിക്കാം</span>
+            </button>
+            <button class="tab-btn" data-tab="games" id="tab-btn-games">
+                <svg viewBox="0 0 24 24">
+                    <path d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4-3c-.83 0-1.5-.67-1.5-1.5S18.67 9 19.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+                </svg>
+                <span class="malayalam-font">കളിക്കാം</span>
+            </button>
+            <button class="tab-btn" data-tab="achievements" id="tab-btn-achievements">
+                <svg viewBox="0 0 24 24">
+                    <path d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v3c0 2.44 1.72 4.48 4 4.88V19c0 1.1.9 2 2 2h6c1.1 0 2-.9 2-2v-4.12c2.28-.4 4-2.44 4-4.88V7c0-1.1-.9-2-2-2zM5 10V7h2v3c0 1.1-.9 2-2 2zm14 0c0-1.1-.9-2-2-2V7h2v3zm-4 9H9v-2h6v2z"/>
+                </svg>
+                <span class="malayalam-font">നേട്ടങ്ങൾ</span>
+            </button>
+        </nav>
+
+        <!-- Main Display Area -->
+        <main class="main-content">
+
+            <!-- Section 1: Study Mode -->
+            <div id="study-view" class="view-section active">
+                <div class="study-intro malayalam-font">
+                    ഫെഅ്ൽ മുളാരിഅ് (فعل مضارع - വർത്തമാനകാല ക്രിയ) വചനം, ലിംഗം, പുരുഷൻ എന്നിവയുടെ അടിസ്ഥാനത്തിൽ 14 രൂപങ്ങളായാണ് വരുന്നത്. താഴെയുള്ള ഗ്രൂപ്പുകൾ പരിശോധിച്ച് അവയുടെ ഉച്ചാരണവും അർത്ഥവും പഠിക്കാം!
+                </div>
+                
+                <div class="study-groups-container" id="study-groups-list">
+                    <!-- Dynamic rendering via app.js -->
+                </div>
+            </div>
+
+            <!-- Section 2: Practice Mode -->
+            <div id="practice-view" class="view-section">
+                <div class="practice-selector">
+                    <button class="selector-btn active" data-subview="flashcards" id="practice-tab-flashcard">
+                        <span class="malayalam-font">ഫ്ലാഷ് കാർഡുകൾ</span>
+                    </button>
+                    <button class="selector-btn" data-subview="reveal" id="practice-tab-reveal">
+                        <span class="malayalam-font">സ്വയം പരിശോധന</span>
+                    </button>
+                    <button class="selector-btn" data-subview="tracing" id="practice-tab-tracing">
+                        <span class="malayalam-font">എഴുതി പഠിക്കാം</span>
+                    </button>
+                </div>
+
+                <!-- Sub-panel A: Flashcards -->
+                <div id="practice-flashcards" class="practice-panel active">
+                    <div class="flashcard-arena">
+                        <div class="flashcard-card" id="flashcard-element">
+                            <div class="flashcard-inner">
+                                <div class="flashcard-front">
+                                    <span class="card-title-hint malayalam-font">ഫ്രണ്ട് സൈഡ്</span>
+                                    <span class="card-pronoun-tag pronoun-badge" id="card-front-pronoun">هو</span>
+                                    <span class="card-content-arabic arabic-font" id="card-front-arabic">يَفْعَلُ</span>
+                                    <span class="card-flip-prompt malayalam-font">
+                                        👉 മറിച്ചു നോക്കാൻ തൊടുക
+                                    </span>
+                                </div>
+                                <div class="flashcard-back">
+                                    <span class="card-title-hint malayalam-font">ബാക്ക് സൈഡ്</span>
+                                    <span class="card-content-malayalam malayalam-font" id="card-back-meaning">ഏകവചനം പുല്ലിംഗം (അവൻ)</span>
+                                    <span class="card-grammar-desc malayalam-font" id="card-back-grammar">غائب (Third Person Masculine)</span>
+                                    <span class="card-flip-prompt malayalam-font">
+                                        👈 വീണ്ടും മറിക്കാൻ തൊടുക
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="practice-controls">
+                            <button class="btn-secondary" id="fc-btn-prev">
+                                <svg viewBox="0 0 24 24" width="16" height="16"><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/></svg>
+                                <span class="malayalam-font">മുൻപത്തേത്</span>
+                            </button>
+                            <button class="audio-btn" id="fc-btn-speak" title="ശബ്ദം കേൾക്കാം">
+                                <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+                            </button>
+                            <button class="btn-primary" id="fc-btn-next">
+                                <span class="malayalam-font">അടുത്തത്</span>
+                                <svg viewBox="0 0 24 24" width="16" height="16"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sub-panel B: Self-Practice Reveal -->
+                <div id="practice-reveal" class="practice-panel">
+                    <div class="flashcard-arena">
+                        <div class="practice-reveal-box">
+                            <span class="pronoun-badge" id="reveal-pronoun">أَنْتَ</span>
+                            <span class="reveal-arabic arabic-font" id="reveal-arabic">تَفْعَلُ</span>
+                            
+                            <div class="reveal-secret-container blurred" id="reveal-secret">
+                                <span class="malayalam-font" id="reveal-meaning">നീ (പുരുഷൻ)</span>
+                            </div>
+                            
+                            <span class="card-flip-prompt malayalam-font" id="reveal-prompt-text">
+                                അർത്ഥം മനസ്സിൽ ഓർത്തു നോക്കൂ, കാണാൻ മുകളിൽ തൊടുക!
+                            </span>
+                        </div>
+
+                        <div class="practice-controls">
+                            <button class="btn-secondary" id="rev-btn-wrong">
+                                <span class="malayalam-font">അറിയില്ലായിരുന്നു ❌</span>
+                            </button>
+                            <button class="btn-primary" id="rev-btn-correct">
+                                <span class="malayalam-font">എനിക്കറിയാം! ✅</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sub-panel C: Writing Tracing -->
+                <div id="practice-tracing" class="practice-panel">
+                    <div class="tracing-arena">
+                        <div class="study-intro malayalam-font" style="width:100%; max-width:380px;">
+                            സ്ക്രീനിൽ വിരലോ മൗസോ ഉപയോഗിച്ച് താഴെയുള്ള അക്ഷരങ്ങൾക്ക് മുകളിലൂടെ എഴുതി പരിശീലിക്കൂ!
+                        </div>
+                        <div class="tracing-box" id="tracing-box-element">
+                            <div class="tracing-outline-bg arabic-font" id="tracing-outline">يَفْعَلُ</div>
+                            <div class="tracing-grid-line h-middle"></div>
+                            <span class="tracing-label-overlay malayalam-font" id="tracing-desc-label">യഫ്അലു - എഴുതുക</span>
+                            <canvas class="tracing-canvas" id="canvas-tracing"></canvas>
+                        </div>
+
+                        <div class="practice-controls">
+                            <button class="btn-secondary" id="trace-btn-clear">
+                                <span class="malayalam-font">മായ്ക്കുക 🗑️</span>
+                            </button>
+                            <button class="btn-primary" id="trace-btn-next">
+                                <span class="malayalam-font">അടുത്തത്</span>
+                                <svg viewBox="0 0 24 24" width="16" height="16"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 3: Game Arcade Menu -->
+            <div id="games-view" class="view-section">
+                <div class="game-intro-card">
+                    <span class="game-intro-icon">🎮</span>
+                    <div class="game-intro-text">
+                        <h3 class="malayalam-font">കളിച്ചു പഠിക്കാം!</h3>
+                        <p class="malayalam-font">താഴെയുള്ള കളികളിൽ പങ്കെടുത്ത് ഒരു മുളാരിഅ് ചാമ്പ്യൻ ആകൂ! മികച്ച സ്കോറുകൾ വാങ്ങി ബാഡ്ജുകൾ നേടൂ.</p>
+                    </div>
+                </div>
+
+                <div class="games-grid">
+                    <!-- Game 1 Card -->
+                    <div class="game-selection-card" data-game="1">
+                        <div class="game-card-icon-container">🤝</div>
+                        <div class="game-card-info">
+                            <h4 class="malayalam-font">1. പ്രൊനൗൺ മാച്ചിങ് (Match Pronoun)</h4>
+                            <p class="malayalam-font">സർവ്വനാമങ്ങളെ (Pronouns) ശരിയായ ക്രിയാരൂപങ്ങളുമായി ബന്ധിപ്പിക്കുക.</p>
+                        </div>
+                        <span class="game-card-badge" id="g1-high">High: 0</span>
+                    </div>
+
+                    <!-- Game 2 Card -->
+                    <div class="game-selection-card" data-game="2">
+                        <div class="game-card-icon-container">❓</div>
+                        <div class="game-card-info">
+                            <h4 class="malayalam-font">2. മൾട്ടിപ്പിൾ ചോയ്സ് ക്വിസ് (MCQ Quiz)</h4>
+                            <p class="malayalam-font">ശരിയായ ക്രിയാരൂപം ഏതാണെന്ന് 3 ഓപ്ഷനുകളിൽ നിന്നും കണ്ടെത്തുക.</p>
+                        </div>
+                        <span class="game-card-badge" id="g2-high">High: 0</span>
+                    </div>
+
+                    <!-- Game 3 Card -->
+                    <div class="game-selection-card" data-game="3">
+                        <div class="game-card-icon-container">🎈</div>
+                        <div class="game-card-info">
+                            <h4 class="malayalam-font">3. ബലൂൺ പോപ്പ് (Balloon Pop)</h4>
+                            <p class="malayalam-font">ചോദ്യത്തിനനുസരിച്ച ശരിയായ പദമുള്ള ബലൂൺ കണ്ടെത്തി അടിച്ചു പൊട്ടിക്കുക!</p>
+                        </div>
+                        <span class="game-card-badge" id="g3-high">High: 0</span>
+                    </div>
+
+                    <!-- Game 4 Card -->
+                    <div class="game-selection-card" data-game="4">
+                        <div class="game-card-icon-container">⚡</div>
+                        <div class="game-card-info">
+                            <h4 class="malayalam-font">4. സ്പീഡ് ചലഞ്ച് (Speed Challenge)</h4>
+                            <p class="malayalam-font">60 സെക്കന്റിൽ മലയാളം അർത്ഥങ്ങൾക്കനുസരിച്ച് എത്ര വാക്കുകൾ കണ്ടെത്താനാകും?</p>
+                        </div>
+                        <span class="game-card-badge" id="g4-high">High: 0</span>
+                    </div>
+
+                    <!-- Game 5 Card -->
+                    <div class="game-selection-card" data-game="5">
+                        <div class="game-card-icon-container">🃏</div>
+                        <div class="game-card-info">
+                            <h4 class="malayalam-font">5. മെമ്മറി മാച്ച് (Memory Cards)</h4>
+                            <p class="malayalam-font">കാർഡുകൾ മറിച്ചു നോക്കി സർവ്വനാമങ്ങളുടെയും ക്രിയകളുടെയും ജോഡികൾ കണ്ടെത്തുക.</p>
+                        </div>
+                        <span class="game-card-badge" id="g5-high">High: 0</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 4: Achievements -->
+            <div id="achievements-view" class="view-section">
+                <!-- Stats Summary -->
+                <div class="stats-summary-card">
+                    <div class="summary-stat-item">
+                        <span class="summary-stat-value" id="stats-total-stars">0</span>
+                        <span class="summary-stat-label malayalam-font">ആകെ നക്ഷത്രങ്ങൾ</span>
+                    </div>
+                    <div class="summary-stat-item">
+                        <span class="summary-stat-value" id="stats-total-correct">0</span>
+                        <span class="summary-stat-label malayalam-font">ശരിയായ ഉത്തരങ്ങൾ</span>
+                    </div>
+                    <div class="summary-stat-item">
+                        <span class="summary-stat-value" id="stats-progress-pct">0%</span>
+                        <span class="summary-stat-label malayalam-font">പഠന പുരോഗതി</span>
+                    </div>
+                </div>
+
+                <h3 class="malayalam-font" style="margin-top: 5px; font-size: 1.1rem; color: var(--primary-dark)">ലഭിച്ച ബാഡ്ജുകൾ</h3>
+                
+                <div class="badges-container">
+                    <!-- Badge 1 -->
+                    <div class="badge-card" id="badge-beginner">
+                        <span class="badge-status">Locked</span>
+                        <div class="badge-icon">🌟</div>
+                        <span class="badge-name-arabic">مُبْتَدِئٌ</span>
+                        <span class="badge-name-malayalam malayalam-font">തുടക്കക്കാരൻ ബാഡ്ജ്</span>
+                    </div>
+
+                    <!-- Badge 2 -->
+                    <div class="badge-card" id="badge-pronoun">
+                        <span class="badge-status">Locked</span>
+                        <div class="badge-icon">🤝</div>
+                        <span class="badge-name-arabic">مُتَقِنُ الضَّمَائِرِ</span>
+                        <span class="badge-name-malayalam malayalam-font">പ്രൊനൗൺ മാസ്റ്റർ</span>
+                    </div>
+
+                    <!-- Badge 3 -->
+                    <div class="badge-card" id="badge-champion">
+                        <span class="badge-status">Locked</span>
+                        <div class="badge-icon">⚡</div>
+                        <span class="badge-name-arabic">بَطَلُ الْمُضَارِعِ</span>
+                        <span class="badge-name-malayalam malayalam-font">മുളാരിഅ് ചാമ്പ്യൻ</span>
+                    </div>
+
+                    <!-- Badge 4 -->
+                    <div class="badge-card" id="badge-trophy">
+                        <span class="badge-status">Locked</span>
+                        <div class="badge-icon">🏆</div>
+                        <span class="badge-name-arabic">الْفَائِزُ الْأَكْبَرُ</span>
+                        <span class="badge-name-malayalam malayalam-font">മഹാ വിജയി ട്രോഫി</span>
+                    </div>
+                </div>
+
+                <div class="danger-zone">
+                    <button class="btn-danger-outline malayalam-font" id="btn-reset-data">
+                        ഡാറ്റ മുഴുവൻ മായ്ക്കുക (Reset Progress)
+                    </button>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- Full-screen Game Play Overlay -->
+        <div class="game-play-overlay" id="game-overlay-container">
+            <div class="game-header-bar">
+                <button class="game-back-btn" id="game-btn-back">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+                    </svg>
+                    <span class="malayalam-font">അവസാനിപ്പിക്കുക</span>
+                </button>
+                <span class="game-header-title malayalam-font" id="game-title-display">കളിപ്പേര്</span>
+                <div class="game-score-pill">
+                    <span>⭐</span>
+                    <span id="game-score-count">0</span>
+                </div>
+            </div>
+            
+            <div class="game-content-area" id="game-play-workspace">
+                <!-- Individual games inject content here -->
+            </div>
+
+            <!-- Game Results Section (inside overlay after completion) -->
+            <div class="game-results-panel" id="game-results-board">
+                <div class="results-trophy">🏆</div>
+                <h2 class="results-title malayalam-font" id="results-title-text">നല്ല ശ്രമം!</h2>
+                <div class="results-score-info malayalam-font">
+                    ലഭിച്ച സ്കോർ: <span id="results-score-val">0</span>
+                </div>
+                <div class="results-stats-row">
+                    <div class="results-stat-box">
+                        <div class="results-stat-value" id="results-correct-val">0</div>
+                        <div class="results-stat-label malayalam-font">ശരികൾ</div>
+                    </div>
+                    <div class="results-stat-box">
+                        <div class="results-stat-value" id="results-stars-gained">0</div>
+                        <div class="results-stat-label malayalam-font">നേടിയ നക്ഷത്രം</div>
+                    </div>
+                </div>
+                <button class="btn-primary" id="results-btn-done" style="width:100%; max-width:200px;">
+                    <span class="malayalam-font">തിരികെ പോവുക</span>
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Celebration Canvas Overlay -->
+    <canvas id="confetti-canvas"></canvas>
+
+    <script src="app.js"></script>
+</body>
+</html>
