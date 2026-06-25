@@ -645,28 +645,102 @@ function initPracticeView() {
 
 // Flashcard Panel
 const fcCard = document.getElementById('flashcard-element');
-fcCard.addEventListener('click', () => {
-    SoundFX.playClick();
-    fcCard.classList.toggle('flipped');
-});
 
-document.getElementById('fc-btn-next').addEventListener('click', () => {
+// Navigation functions
+function nextFlashcard() {
     SoundFX.playClick();
     fcCard.classList.remove('flipped');
     setTimeout(() => {
         flashcardIndex = (flashcardIndex + 1) % VERB_DATA.length;
         updateFlashcard();
     }, 150);
-});
+}
 
-document.getElementById('fc-btn-prev').addEventListener('click', () => {
+function prevFlashcard() {
     SoundFX.playClick();
     fcCard.classList.remove('flipped');
     setTimeout(() => {
         flashcardIndex = (flashcardIndex - 1 + VERB_DATA.length) % VERB_DATA.length;
         updateFlashcard();
     }, 150);
+}
+
+// Swipe detection logic
+let touchStartX = 0;
+let touchStartY = 0;
+let touchEndX = 0;
+let touchEndY = 0;
+let isSwipeAction = false;
+
+fcCard.addEventListener('touchstart', (e) => {
+    const touch = e.touches[0];
+    touchStartX = touch.clientX;
+    touchStartY = touch.clientY;
+    isSwipeAction = false;
+}, { passive: true });
+
+fcCard.addEventListener('touchmove', (e) => {
+    const touch = e.touches[0];
+    touchEndX = touch.clientX;
+    touchEndY = touch.clientY;
+    
+    const diffX = touchEndX - touchStartX;
+    const diffY = touchEndY - touchStartY;
+    
+    // If finger moves more than 15px, mark as swipe to prevent flipping on release
+    if (Math.abs(diffX) > 15 || Math.abs(diffY) > 15) {
+        isSwipeAction = true;
+    }
+}, { passive: true });
+
+fcCard.addEventListener('touchend', (e) => {
+    if (isSwipeAction) {
+        const diffX = touchEndX - touchStartX;
+        const diffY = touchEndY - touchStartY;
+        
+        if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
+            // Horizontal swipe
+            if (diffX < 0) {
+                nextFlashcard();
+            } else {
+                prevFlashcard();
+            }
+        }
+    }
+}, { passive: true });
+
+fcCard.addEventListener('click', () => {
+    if (isSwipeAction) {
+        isSwipeAction = false;
+        return;
+    }
+    SoundFX.playClick();
+    fcCard.classList.toggle('flipped');
 });
+
+// Keyboard Navigation
+window.addEventListener('keydown', (e) => {
+    const practiceView = document.getElementById('practice-view');
+    const flashcardsPanel = document.getElementById('practice-flashcards');
+    
+    // Only capture when practice tab and flashcards subview are active
+    if (practiceView && practiceView.classList.contains('active') &&
+        flashcardsPanel && flashcardsPanel.classList.contains('active')) {
+        
+        if (e.key === 'ArrowRight') {
+            nextFlashcard();
+        } else if (e.key === 'ArrowLeft') {
+            prevFlashcard();
+        } else if (e.key === ' ' || e.key === 'ArrowUp' || e.key === 'ArrowDown') {
+            e.preventDefault();
+            SoundFX.playClick();
+            fcCard.classList.toggle('flipped');
+        }
+    }
+});
+
+document.getElementById('fc-btn-next').addEventListener('click', nextFlashcard);
+document.getElementById('fc-btn-prev').addEventListener('click', prevFlashcard);
 
 document.getElementById('fc-btn-speak').addEventListener('click', (e) => {
     e.stopPropagation();
