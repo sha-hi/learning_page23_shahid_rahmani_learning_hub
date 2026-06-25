@@ -7,164 +7,76 @@
 const VERB_DATA = [
     {
         id: 1,
-        arabic: 'يَفْعَلُ',
+        arabic: 'يَذْهَبُ',
         pronoun: 'هُوَ',
         group: 1,
-        groupTitleAr: 'غائب - مذكر',
-        groupTitleMl: 'പരോക്ഷം - പുല്ലിംഗം',
-        meaning: 'അവൻ ഒരു പുരുഷൻ പ്രവർത്തിക്കും',
-        grammar: 'وحدان مذكر غائب',
-        transliteration: 'യഫ്അലു'
+        groupTitleAr: 'مذكر',
+        groupTitleMl: '',
+        meaning: 'അവൻ പോയി (പുരുഷൻ)',
+        grammar: '',
+        transliteration: 'യദ്ഹബു'
     },
     {
         id: 2,
-        arabic: 'يَفْعَلَانِ',
+        arabic: 'يَذْهَبَانِ',
         pronoun: 'هُما (مذكر)',
         group: 1,
-        groupTitleAr: 'غائب - مذكر',
-        groupTitleMl: 'പരോക്ഷം - പുല്ലിംഗം',
-        meaning: 'അവർ രണ്ടു പുരുഷന്മാർ പ്രവർത്തിക്കും',
-        grammar: 'مثنى مذكر غائب',
-        transliteration: 'യഫ്അലാനി'
+        groupTitleAr: 'مذكر',
+        groupTitleMl: '',
+        meaning: 'അവർ രണ്ടുപേർ പോയി (പുരുഷന്മാർ )',
+        grammar: '',
+        transliteration: 'യദ്ഹബാനി'
     },
     {
         id: 3,
-        arabic: 'يَفْعَلُونَ',
+        arabic: 'يَذْهَبُونَ',
         pronoun: 'هُمْ',
         group: 1,
-        groupTitleAr: 'غائب - مذكر',
-        groupTitleMl: 'പരോക്ഷം - പുല്ലിംഗം',
-        meaning: 'അവർ കുറെ പുരുഷന്മാർ പ്രവർത്തിക്കും',
-        grammar: 'جمع مذكر غائب',
-        transliteration: 'യഫ്അലൂന'
+        groupTitleAr: 'مذكر',
+        groupTitleMl: '',
+        meaning: 'അവർ അനേകം പേർ പോയി (പുരുഷന്മാർ )',
+        grammar: '',
+        transliteration: 'യദ്ഹബൂന'
     },
     {
         id: 4,
-        arabic: 'تَفْعَلُ',
+        arabic: 'تَذْهَبُ',
         pronoun: 'هِيَ',
         group: 2,
-        groupTitleAr: 'غائب - مؤنث',
-        groupTitleMl: 'പരോക്ഷം - സ്ത്രീലിംഗം',
-        meaning: 'അവൾ ഒരു സ്ത്രീ പ്രവർത്തിക്കും',
-        grammar: 'وحدان مؤنث غائب',
-        transliteration: 'തഫ്അലു'
+        groupTitleAr: 'مؤنث',
+        groupTitleMl: '',
+        meaning: 'അവൾ പോയി (സ്ത്രീ)',
+        grammar: '',
+        transliteration: 'തദ്ഹബു'
     },
     {
         id: 5,
-        arabic: 'تَفْعَلَانِ',
+        arabic: 'تَذْهَبَانِ',
         pronoun: 'هُما (مؤنث)',
         group: 2,
-        groupTitleAr: 'غائب - مؤنث',
-        groupTitleMl: 'പരോക്ഷം - സ്ത്രീലിംഗം',
-        meaning: 'അവൾ രണ്ടു സ്ത്രീകൾ പ്രവർത്തിക്കും',
-        grammar: 'مثنى مؤنث غائب',
-        transliteration: 'തഫ്അലാനി'
+        groupTitleAr: 'مؤنث',
+        groupTitleMl: '',
+        meaning: 'അവർ രണ്ടുപേരെ പോയി (സ്ത്രീകൾ )',
+        grammar: '',
+        transliteration: 'തദ്ഹബാനി'
     },
     {
         id: 6,
-        arabic: 'يَفْعَلْنَ',
-        pronoun: 'هُنَّ',
+        arabic: 'يَذْهَبْنَ',
+        pronoun: 'هُനَّ',
         group: 2,
-        groupTitleAr: 'غائب - مؤنث',
-        groupTitleMl: 'പരോക്ഷം - സ്ത്രീലിംഗം',
-        meaning: 'അവർ കുറെ സ്ത്രീകൾ പ്രവർത്തിക്കും',
-        grammar: 'جمع مؤنث غائب',
-        transliteration: 'യഫ്അൽന'
-    },
-    {
-        id: 7,
-        arabic: 'تَفْعَلُ',
-        pronoun: 'أَنْتَ',
-        group: 3,
-        groupTitleAr: 'حاضر - مذكر',
-        groupTitleMl: 'മദ്ധ്യമൻ - പുല്ലിംഗം',
-        meaning: 'നീ ഒരു പുരുഷൻ പ്രവർത്തിക്കും',
-        grammar: 'واحدان مذكر حاضر',
-        transliteration: 'തഫ്അലു'
-    },
-    {
-        id: 8,
-        arabic: 'تَفْعَلَانِ',
-        pronoun: 'أَنْتُما (مذكر)',
-        group: 3,
-        groupTitleAr: 'حاضر - مذكر',
-        groupTitleMl: 'മദ്ധ്യമൻ - പുല്ലിംഗം',
-        meaning: 'നിങ്ങൾ രണ്ടു പുരുഷന്മാർ പ്രവർത്തിക്കും',
-        grammar: 'مثنى مذكر حاضر',
-        transliteration: 'തഫ്അലാനി'
-    },
-    {
-        id: 9,
-        arabic: 'تَفْعَلُونَ',
-        pronoun: 'أَنْتُمْ',
-        group: 3,
-        groupTitleAr: 'حاضر - مذكر',
-        groupTitleMl: 'മദ്ധ്യമൻ - പുല്ലിംഗം',
-        meaning: 'നിങ്ങൾ കുറെ പുരുഷന്മാർ പ്രവർത്തിക്കും',
-        grammar: 'جمع مذكر حاضر',
-        transliteration: 'തഫ്അലൂന'
-    },
-    {
-        id: 10,
-        arabic: 'تَفْعَلِينَ',
-        pronoun: 'أَنْتِ',
-        group: 4,
-        groupTitleAr: 'حاضر - مؤنث',
-        groupTitleMl: 'മദ്ധ്യമൻ - സ്ത്രീലിംഗം',
-        meaning: 'നീ ഒരു സ്ത്രീ പ്രവർത്തിക്കും',
-        grammar: 'واحدان مؤنث حاضر',
-        transliteration: 'തഫ്അലീന'
-    },
-    {
-        id: 11,
-        arabic: 'تَفْعَلَانِ',
-        pronoun: 'أَنْتُما (مؤنث)',
-        group: 4,
-        groupTitleAr: 'حاضر - مؤنث',
-        groupTitleMl: 'മദ്ധ്യമൻ - സ്ത്രീലിംഗം',
-        meaning: 'നിങ്ങൾ രണ്ടു സ്ത്രീകൾ പ്രവർത്തിക്കും',
-        grammar: 'مثنى مؤنث حاضر',
-        transliteration: 'തഫ്അലാനി'
-    },
-    {
-        id: 12,
-        arabic: 'تَفْعَلْنَ',
-        pronoun: 'أَنْتُنَّ',
-        group: 4,
-        groupTitleAr: 'حاضر - مؤنث',
-        groupTitleMl: 'മദ്ധ്യമൻ - സ്ത്രീലിംഗം',
-        meaning: 'നിങ്ങൾ കുറെ സ്ത്രീകൾ പ്രവർത്തിക്കും',
-        grammar: 'جمع مؤنث حاضر',
-        transliteration: 'തഫ്അൽന'
-    },
-    {
-        id: 13,
-        arabic: 'أَفْعَلُ',
-        pronoun: 'أَنَا',
-        group: 5,
-        groupTitleAr: 'متكلم',
-        groupTitleMl: 'ഉത്തമപുരുഷൻ',
-        meaning: 'ഞാൻ പ്രവർത്തിക്കും',
-        grammar: 'واحدان متكلم',
-        transliteration: 'അഫ്അലു'
-    },
-    {
-        id: 14,
-        arabic: 'نَفْعَلُ',
-        pronoun: 'نَحْنُ',
-        group: 5,
-        groupTitleAr: 'متكلم',
-        groupTitleMl: 'ഉത്തമപുരുഷൻ',
-        meaning: 'ഞങ്ങൾ പ്രവർത്തിക്കും',
-        grammar: 'مثنى جمع متكلم',
-        transliteration: 'നഫ്അലു'
+        groupTitleAr: 'مؤنث',
+        groupTitleMl: '',
+        meaning: 'അവർ അനേകം പേർ പോയി (സ്ത്രീകൾ )',
+        grammar: '',
+        transliteration: 'യദ്ഹബ്ന'
     }
 ];
 
 // Group metadata
 const GROUPS = [
-    { id: 1, ar: 'غائب - مذكر', ml: 'പരോക്ഷം - പുല്ലിംഗം' },
-    { id: 2, ar: 'غائب - مؤنث', ml: 'പരോക്ഷം - സ്ത്രീലിംഗം' },
+    { id: 1, ar: 'مذكر', ml: 'പുല്ലിംഗം' },
+    { id: 2, ar: 'مؤنث', ml: 'സ്ത്രീലിംഗം' },
     { id: 3, ar: 'حاضر - مذكر', ml: 'മദ്ധ്യമൻ - പുല്ലിംഗം' },
     { id: 4, ar: 'حاضر - مؤنث', ml: 'മദ്ധ്യമൻ - സ്ത്രീലിംഗം' },
     { id: 5, ar: 'متكلم', ml: 'ഉത്തമപുരുഷൻ' }
@@ -172,12 +84,12 @@ const GROUPS = [
 
 // Unique pairing set for memory match game (to ensure cards match exactly 1-to-1)
 const MEMORY_PAIRS = [
-    { meaning: 'അവൻ ഒരു പുരുഷൻ പ്രവർത്തിക്കും', verb: 'يَفْعَلُ' },
-    { meaning: 'അവർ കുറെ പുരുഷന്മാർ പ്രവർത്തിക്കും', verb: 'يَفْعَلُونَ' },
-    { meaning: 'അവൾ ഒരു സ്ത്രീ പ്രവർത്തിക്കും', verb: 'تَفْعَلُ' },
-    { meaning: 'അവർ കുറെ സ്ത്രീകൾ പ്രവർത്തിക്കും', verb: 'يَفْعَلْنَ' },
-    { meaning: 'നീ ഒരു സ്ത്രീ പ്രവർത്തിക്കും', verb: 'تَفْعَلِينَ' },
-    { meaning: 'ഞാൻ പ്രവർത്തിക്കും', verb: 'أَفْعَلُ' }
+    { meaning: 'അവൻ പോയി (പുരുഷൻ)', verb: 'يَذْهَبُ' },
+    { meaning: 'അവർ രണ്ടുപേർ പോയി (പുരുഷന്മാർ )', verb: 'يَذْهَبَانِ' },
+    { meaning: 'അവർ അനേകം പേർ പോയി (പുരുഷന്മാർ )', verb: 'يَذْهَبُونَ' },
+    { meaning: 'അവൾ പോയി (സ്ത്രീ)', verb: 'تَذْهَبُ' },
+    { meaning: 'അവർ രണ്ടുപേരെ പോയി (സ്ത്രീകൾ )', verb: 'تَذْهَبَانِ' },
+    { meaning: 'അവർ അനേകം പേർ പോയി (സ്ത്രീകൾ )', verb: 'يَذْهَبْنَ' }
 ];
 
 // --------------------------------------------------------------------
@@ -432,10 +344,10 @@ function updateStatsDisplay() {
     document.getElementById('stats-total-correct').innerText = state.totalCorrect;
     
     // Calculate progress
-    // Progress = (number of read verbs / 14 * 50%) + (number of played games / 5 * 50%)
+    // Progress = (number of read verbs / 6 * 50%) + (number of played games / 5 * 50%)
     const readCount = state.readVerbs.length;
     const gamesPlayed = Object.values(state.highScores).filter(s => s > 0).length;
-    const progressPct = Math.round((readCount / 14) * 50 + (gamesPlayed / 5) * 50);
+    const progressPct = Math.round((readCount / 6) * 50 + (gamesPlayed / 5) * 50);
     
     document.getElementById('stats-progress-pct').innerText = `${progressPct}%`;
     document.getElementById('header-progress-fill').style.width = `${progressPct}%`;
@@ -452,33 +364,52 @@ function updateStatsDisplay() {
 function evaluateBadges() {
     let unlockedAny = false;
 
-    // 1. Beginner Badge (read all 14 verbs)
-    if (state.readVerbs.length >= 14 && !state.unlockedBadges.includes('beginner')) {
-        state.unlockedBadges.push('beginner');
-        unlockedAny = true;
-        triggerBadgeUnlockEffect('badge-beginner', 'مُبْتَدِئٌ', 'തുടക്കക്കാരൻ ബാഡ്ജ്!');
+    function checkUnlock(badgeId, condition, nameAr, nameMl) {
+        if (condition && !state.unlockedBadges.includes(badgeId)) {
+            state.unlockedBadges.push(badgeId);
+            unlockedAny = true;
+            triggerBadgeUnlockEffect(`badge-${badgeId}`, nameAr, nameMl);
+        }
     }
 
-    // 2. Meaning Master (Match meaning high score >= 100)
-    if (state.highScores.g1 >= 100 && !state.unlockedBadges.includes('pronoun')) {
-        state.unlockedBadges.push('pronoun');
-        unlockedAny = true;
-        triggerBadgeUnlockEffect('badge-pronoun', 'مُتَقِنُ الْمَعَانِي', 'അർത്ഥ മാസ്റ്റർ ബാഡ്ജ്!');
-    }
+    // 1. 🌱 Beginner
+    checkUnlock('beginner', state.readVerbs.length >= 1, 'مُبْتَدِئٌ', 'തുടക്കക്കാരൻ');
 
-    // 3. Mudhari Champion (Speed challenge score >= 100 OR Balloon Pop score >= 100)
-    if ((state.highScores.g3 >= 120 || state.highScores.g4 >= 100) && !state.unlockedBadges.includes('champion')) {
-        state.unlockedBadges.push('champion');
-        unlockedAny = true;
-        triggerBadgeUnlockEffect('badge-champion', 'بَطَلُ الْمُضَارِعِ', 'മുളാരിഅ് ചാമ്പ്യൻ ബാഡ്ജ്!');
-    }
+    // 2. 📘 Learner
+    checkUnlock('learner', state.readVerbs.length >= 3, 'دَارِسٌ', 'പഠിതാവ്');
 
-    // 4. Grand Trophy (Memory match high score >= 100)
-    if (state.highScores.g5 >= 100 && !state.unlockedBadges.includes('trophy')) {
-        state.unlockedBadges.push('trophy');
-        unlockedAny = true;
-        triggerBadgeUnlockEffect('badge-trophy', 'الْفَائِزُ الْأَكْبَرُ', 'മഹാ വിജയി ട്രോഫി!');
-    }
+    // 3. 📚 Student
+    checkUnlock('student', state.readVerbs.length >= 6, 'طَالِبٌ', 'വിദ്യാർത്ഥി');
+
+    // 4. 🔵 Explorer
+    const maxScore = Math.max(...Object.values(state.highScores));
+    checkUnlock('explorer', maxScore >= 20, 'مُسْتَكْشِفٌ', 'അന്വേഷകൻ');
+
+    // 5. 🎓 Scholar
+    checkUnlock('scholar', state.highScores.g1 >= 50 || state.highScores.g2 >= 50, 'عَالِمٌ', 'പണ്ഡിതൻ');
+
+    // 6. 📖 Expert (Book)
+    checkUnlock('expert-book', state.highScores.g3 >= 60, 'خَبِيرٌ', 'വിദഗ്ദ്ധൻ');
+
+    // 7. 🧠 Expert (Brain)
+    checkUnlock('expert-brain', state.highScores.g5 >= 60, 'ذَكِيٌّ', 'ബുദ്ധിശാലി');
+
+    // 8. ⭐ Elite
+    checkUnlock('elite', state.stars >= 100, 'نُخْبَةٌ', 'അഭിജാതൻ');
+
+    // 9. 🟠 Master
+    checkUnlock('master', maxScore >= 100, 'مَاسْتَر', 'മാസ്റ്റർ');
+
+    // 10. 🏆 Grand Champion
+    checkUnlock('champion', state.highScores.g4 >= 120, 'بَطَلٌ كَبِيرٌ', 'മഹാ വിജയി');
+
+    // 11. 👑 Legend
+    checkUnlock('legend', state.totalCorrect >= 500, 'أُسْطُورَةٌ', 'ഇതിഹാസം');
+
+    // 12. 👑 Grand Master
+    const otherBadges = ['beginner', 'learner', 'student', 'explorer', 'scholar', 'expert-book', 'expert-brain', 'elite', 'master', 'champion', 'legend'];
+    const unlockedAllOthers = otherBadges.every(b => state.unlockedBadges.includes(b));
+    checkUnlock('grandmaster', unlockedAllOthers, 'أُسْتَاذٌ أَكْبَرُ', 'ഗ്രാൻഡ് മാസ്റ്റർ');
 
     // Update styling for unlocked badges
     state.unlockedBadges.forEach(badgeId => {
@@ -567,6 +498,7 @@ function renderStudyView() {
     GROUPS.forEach(groupMeta => {
         // Find verbs in this group
         const groupVerbs = VERB_DATA.filter(v => v.group === groupMeta.id);
+        if (groupVerbs.length === 0) return;
 
         const card = document.createElement('div');
         card.className = 'group-card';
@@ -752,6 +684,7 @@ document.getElementById('fc-btn-speak').addEventListener('click', (e) => {
 function updateFlashcard() {
     const verb = VERB_DATA[flashcardIndex];
     document.getElementById('card-front-arabic').innerText = verb.arabic;
+    document.getElementById('card-front-pronoun').innerText = verb.pronoun;
     document.getElementById('card-back-meaning').innerText = verb.meaning;
     document.getElementById('card-back-grammar').innerText = verb.grammar;
 }
@@ -796,104 +729,8 @@ function loadNextRevealWord() {
 function updateRevealCard() {
     const verb = VERB_DATA[revealIndex];
     document.getElementById('reveal-arabic').innerText = verb.arabic;
+    document.getElementById('reveal-pronoun').innerText = verb.pronoun;
     document.getElementById('reveal-meaning').innerText = verb.meaning;
-}
-
-// --------------------------------------------------------------------
-// 10. Interactive Canvas Tracing (Writing Practice)
-// --------------------------------------------------------------------
-let tracingCanvas = null;
-let tracingCtx = null;
-let isTracing = false;
-let tracingIndex = 0;
-
-function initTracingCanvas() {
-    tracingCanvas = document.getElementById('canvas-tracing');
-    tracingCtx = tracingCanvas.getContext('2d');
-    
-    // Resize to fit the parent container box
-    const box = document.getElementById('tracing-box-element');
-    tracingCanvas.width = box.clientWidth;
-    tracingCanvas.height = box.clientHeight;
-    
-    // Configure stroke styles
-    tracingCtx.strokeStyle = '#1b7a43'; // Forest Green
-    tracingCtx.lineWidth = 14;
-    tracingCtx.lineCap = 'round';
-    tracingCtx.lineJoin = 'round';
-    
-    tracingIndex = 0;
-    loadTracingWord();
-    
-    // Mouse Event Listeners
-    tracingCanvas.addEventListener('mousedown', startTrace);
-    tracingCanvas.addEventListener('mousemove', drawTrace);
-    tracingCanvas.addEventListener('mouseup', stopTrace);
-    tracingCanvas.addEventListener('mouseout', stopTrace);
-    
-    // Touch Event Listeners (Mobile friendly)
-    tracingCanvas.addEventListener('touchstart', (e) => {
-        e.preventDefault();
-        const touch = e.touches[0];
-        const rect = tracingCanvas.getBoundingClientRect();
-        isTracing = true;
-        tracingCtx.beginPath();
-        tracingCtx.moveTo(touch.clientX - rect.left, touch.clientY - rect.top);
-    });
-    
-    tracingCanvas.addEventListener('touchmove', (e) => {
-        e.preventDefault();
-        if (!isTracing) return;
-        const touch = e.touches[0];
-        const rect = tracingCanvas.getBoundingClientRect();
-        tracingCtx.lineTo(touch.clientX - rect.left, touch.clientY - rect.top);
-        tracingCtx.stroke();
-    });
-    
-    tracingCanvas.addEventListener('touchend', stopTrace);
-}
-
-function startTrace(e) {
-    isTracing = true;
-    const rect = tracingCanvas.getBoundingClientRect();
-    tracingCtx.beginPath();
-    tracingCtx.moveTo(e.clientX - rect.left, e.clientY - rect.top);
-}
-
-function drawTrace(e) {
-    if (!isTracing) return;
-    const rect = tracingCanvas.getBoundingClientRect();
-    tracingCtx.lineTo(e.clientX - rect.left, e.clientY - rect.top);
-    tracingCtx.stroke();
-}
-
-function stopTrace() {
-    isTracing = false;
-}
-
-document.getElementById('trace-btn-clear').addEventListener('click', () => {
-    SoundFX.playClick();
-    clearTracingCanvas();
-});
-
-document.getElementById('trace-btn-next').addEventListener('click', () => {
-    SoundFX.playCorrect();
-    state.stars += 2; // reward for drawing practice!
-    saveState();
-    
-    tracingIndex = (tracingIndex + 1) % VERB_DATA.length;
-    clearTracingCanvas();
-    loadTracingWord();
-});
-
-function clearTracingCanvas() {
-    tracingCtx.clearRect(0, 0, tracingCanvas.width, tracingCanvas.height);
-}
-
-function loadTracingWord() {
-    const verb = VERB_DATA[tracingIndex];
-    document.getElementById('tracing-outline').innerText = verb.arabic;
-    document.getElementById('tracing-desc-label').innerText = `${verb.transliteration} (${verb.meaning}) - എഴുതുക`;
 }
 
 // --------------------------------------------------------------------
