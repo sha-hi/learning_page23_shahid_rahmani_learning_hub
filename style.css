@@ -339,14 +339,7 @@ header {
 }
 
 .pronoun-badge {
-    background-color: var(--accent-light);
-    color: var(--accent);
-    font-size: 0.8rem;
-    padding: 2px 8px;
-    border-radius: 20px;
-    font-family: 'Cairo', sans-serif;
-    font-weight: 700;
-    border: 1px solid rgba(230, 126, 34, 0.2);
+    display: none;
 }
 
 .verb-meaning-col {
@@ -1317,12 +1310,15 @@ header {
     transform: rotateY(180deg);
 }
 
-.memory-card-back.pronoun {
+.memory-card-back.meaning {
     background-color: var(--secondary-light);
     border-color: var(--secondary);
-    font-family: 'Cairo', sans-serif;
-    font-size: 1.3rem;
-    font-weight: 700;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--secondary-dark);
+    padding: 4px;
+    line-height: 1.35;
+    text-align: center;
 }
 
 .memory-card-back.verb {

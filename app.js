@@ -10,174 +10,174 @@ const VERB_DATA = [
         arabic: 'يَفْعَلُ',
         pronoun: 'هُوَ',
         group: 1,
-        groupTitleAr: 'غائب (Third Person Masculine)',
-        groupTitleMl: 'പരോക്ഷം - പുല്ലിംഗം (Third Person Masculine)',
-        meaning: 'ഏകവചനം പുല്ലിംഗം (അവൻ)',
-        grammar: 'Singular Masculine - Third Person (അവൻ ചെയ്യുന്നു)',
-        transliteration: 'yafa\'alu'
+        groupTitleAr: 'غائب - مذكر',
+        groupTitleMl: 'പരോക്ഷം - പുല്ലിംഗം',
+        meaning: 'അവൻ ഒരു പുരുഷൻ പ്രവർത്തിക്കും',
+        grammar: 'وحدان مذكر غائب',
+        transliteration: 'യഫ്അലു'
     },
     {
         id: 2,
         arabic: 'يَفْعَلَانِ',
         pronoun: 'هُما (مذكر)',
         group: 1,
-        groupTitleAr: 'غائب (Third Person Masculine)',
-        groupTitleMl: 'പരോക്ഷം - പുല്ലിംഗം (Third Person Masculine)',
-        meaning: 'ദ്വിവചനം പുല്ലിംഗം (അവർ രണ്ടുപേർ)',
-        grammar: 'Dual Masculine - Third Person (അവർ രണ്ടുപേർ ചെയ്യുന്നു)',
-        transliteration: 'yafa\'alaani'
+        groupTitleAr: 'غائب - مذكر',
+        groupTitleMl: 'പരോക്ഷം - പുല്ലിംഗം',
+        meaning: 'അവർ രണ്ടു പുരുഷന്മാർ പ്രവർത്തിക്കും',
+        grammar: 'مثنى مذكر غائب',
+        transliteration: 'യഫ്അലാനി'
     },
     {
         id: 3,
         arabic: 'يَفْعَلُونَ',
         pronoun: 'هُمْ',
         group: 1,
-        groupTitleAr: 'غائب (Third Person Masculine)',
-        groupTitleMl: 'പരോക്ഷം - പുല്ലിംഗം (Third Person Masculine)',
-        meaning: 'ബഹുവചനം പുല്ലിംഗം (അവർ)',
-        grammar: 'Plural Masculine - Third Person (അവർ ചെയ്യുന്നു)',
-        transliteration: 'yafa\'aloona'
+        groupTitleAr: 'غائب - مذكر',
+        groupTitleMl: 'പരോക്ഷം - പുല്ലിംഗം',
+        meaning: 'അവർ കുറെ പുരുഷന്മാർ പ്രവർത്തിക്കും',
+        grammar: 'جمع مذكر غائب',
+        transliteration: 'യഫ്അലൂന'
     },
     {
         id: 4,
         arabic: 'تَفْعَلُ',
         pronoun: 'هِيَ',
         group: 2,
-        groupTitleAr: 'غائب (Third Person Feminine)',
-        groupTitleMl: 'പരോക്ഷം - സ്ത്രീലിംഗം (Third Person Feminine)',
-        meaning: 'ഏകവചനം സ്ത്രീലിംഗം (അവൾ)',
-        grammar: 'Singular Feminine - Third Person (അവൾ ചെയ്യുന്നു)',
-        transliteration: 'tafa\'alu'
+        groupTitleAr: 'غائب - مؤنث',
+        groupTitleMl: 'പരോക്ഷം - സ്ത്രീലിംഗം',
+        meaning: 'അവൾ ഒരു സ്ത്രീ പ്രവർത്തിക്കും',
+        grammar: 'وحدان مؤنث غائب',
+        transliteration: 'തഫ്അലു'
     },
     {
         id: 5,
         arabic: 'تَفْعَلَانِ',
         pronoun: 'هُما (مؤنث)',
         group: 2,
-        groupTitleAr: 'غائب (Third Person Feminine)',
-        groupTitleMl: 'പരോക്ഷം - സ്ത്രീലിംഗം (Third Person Feminine)',
-        meaning: 'ദ്വിവചനം സ്ത്രീലിംഗം (അവർ രണ്ടുപേർ)',
-        grammar: 'Dual Feminine - Third Person (അവർ രണ്ടുപേർ ചെയ്യുന്നു)',
-        transliteration: 'tafa\'alaani'
+        groupTitleAr: 'غائب - مؤنث',
+        groupTitleMl: 'പരോക്ഷം - സ്ത്രീലിംഗം',
+        meaning: 'അവൾ രണ്ടു സ്ത്രീകൾ പ്രവർത്തിക്കും',
+        grammar: 'مثنى مؤنث غائب',
+        transliteration: 'തഫ്അലാനി'
     },
     {
         id: 6,
         arabic: 'يَفْعَلْنَ',
         pronoun: 'هُنَّ',
         group: 2,
-        groupTitleAr: 'غائب (Third Person Feminine)',
-        groupTitleMl: 'പരോക്ഷം - സ്ത്രീലിംഗം (Third Person Feminine)',
-        meaning: 'ബഹുവചനം സ്ത്രീലിംഗം (അവർ)',
-        grammar: 'Plural Feminine - Third Person (അവർ ചെയ്യുന്നു)',
-        transliteration: 'yafa\'alna'
+        groupTitleAr: 'غائب - مؤنث',
+        groupTitleMl: 'പരോക്ഷം - സ്ത്രീലിംഗം',
+        meaning: 'അവർ കുറെ സ്ത്രീകൾ പ്രവർത്തിക്കും',
+        grammar: 'جمع مؤنث غائب',
+        transliteration: 'യഫ്അൽന'
     },
     {
         id: 7,
         arabic: 'تَفْعَلُ',
         pronoun: 'أَنْتَ',
         group: 3,
-        groupTitleAr: 'حاضر (Second Person Masculine)',
-        groupTitleMl: 'മദ്ധ്യമൻ - പുല്ലിംഗം (Second Person Masculine)',
-        meaning: 'നീ (പുരുഷൻ)',
-        grammar: 'Singular Masculine - Second Person (നീ ചെയ്യുന്നു)',
-        transliteration: 'tafa\'alu'
+        groupTitleAr: 'حاضر - مذكر',
+        groupTitleMl: 'മദ്ധ്യമൻ - പുല്ലിംഗം',
+        meaning: 'നീ ഒരു പുരുഷൻ പ്രവർത്തിക്കും',
+        grammar: 'واحدان مذكر حاضر',
+        transliteration: 'തഫ്അലു'
     },
     {
         id: 8,
         arabic: 'تَفْعَلَانِ',
         pronoun: 'أَنْتُما (مذكر)',
         group: 3,
-        groupTitleAr: 'حاضر (Second Person Masculine)',
-        groupTitleMl: 'മദ്ധ്യമൻ - പുല്ലിംഗം (Second Person Masculine)',
-        meaning: 'നിങ്ങൾ രണ്ടുപേർ',
-        grammar: 'Dual Masculine - Second Person (നിങ്ങൾ രണ്ടുപേർ ചെയ്യുന്നു)',
-        transliteration: 'tafa\'alaani'
+        groupTitleAr: 'حاضر - مذكر',
+        groupTitleMl: 'മദ്ധ്യമൻ - പുല്ലിംഗം',
+        meaning: 'നിങ്ങൾ രണ്ടു പുരുഷന്മാർ പ്രവർത്തിക്കും',
+        grammar: 'مثنى مذكر حاضر',
+        transliteration: 'തഫ്അലാനി'
     },
     {
         id: 9,
         arabic: 'تَفْعَلُونَ',
         pronoun: 'أَنْتُمْ',
         group: 3,
-        groupTitleAr: 'حاضر (Second Person Masculine)',
-        groupTitleMl: 'മദ്ധ്യമൻ - പുല്ലിംഗം (Second Person Masculine)',
-        meaning: 'നിങ്ങൾ എല്ലാവരും',
-        grammar: 'Plural Masculine - Second Person (നിങ്ങൾ എല്ലാവരും ചെയ്യുന്നു)',
-        transliteration: 'tafa\'aloona'
+        groupTitleAr: 'حاضر - مذكر',
+        groupTitleMl: 'മദ്ധ്യമൻ - പുല്ലിംഗം',
+        meaning: 'നിങ്ങൾ കുറെ പുരുഷന്മാർ പ്രവർത്തിക്കും',
+        grammar: 'جمع مذكر حاضر',
+        transliteration: 'തഫ്അലൂന'
     },
     {
         id: 10,
         arabic: 'تَفْعَلِينَ',
         pronoun: 'أَنْتِ',
         group: 4,
-        groupTitleAr: 'حاضر (Second Person Feminine)',
-        groupTitleMl: 'മദ്ധ്യമൻ - സ്ത്രീലിംഗം (Second Person Feminine)',
-        meaning: 'നീ (സ്ത്രീ)',
-        grammar: 'Singular Feminine - Second Person (നീ ചെയ്യുന്നു)',
-        transliteration: 'tafa\'aleena'
+        groupTitleAr: 'حاضر - مؤنث',
+        groupTitleMl: 'മദ്ധ്യമൻ - സ്ത്രീലിംഗം',
+        meaning: 'നീ ഒരു സ്ത്രീ പ്രവർത്തിക്കും',
+        grammar: 'واحدان مؤنث حاضر',
+        transliteration: 'തഫ്അലീന'
     },
     {
         id: 11,
         arabic: 'تَفْعَلَانِ',
         pronoun: 'أَنْتُما (مؤنث)',
         group: 4,
-        groupTitleAr: 'حاضر (Second Person Feminine)',
-        groupTitleMl: 'മദ്ധ്യമൻ - സ്ത്രീലിംഗം (Second Person Feminine)',
-        meaning: 'നിങ്ങൾ രണ്ടുപേർ',
-        grammar: 'Dual Feminine - Second Person (നിങ്ങൾ രണ്ടുപേർ ചെയ്യുന്നു)',
-        transliteration: 'tafa\'alaani'
+        groupTitleAr: 'حاضر - مؤنث',
+        groupTitleMl: 'മദ്ധ്യമൻ - സ്ത്രീലിംഗം',
+        meaning: 'നിങ്ങൾ രണ്ടു സ്ത്രീകൾ പ്രവർത്തിക്കും',
+        grammar: 'مثنى مؤنث حاضر',
+        transliteration: 'തഫ്അലാനി'
     },
     {
         id: 12,
         arabic: 'تَفْعَلْنَ',
         pronoun: 'أَنْتُنَّ',
         group: 4,
-        groupTitleAr: 'حاضر (Second Person Feminine)',
-        groupTitleMl: 'മദ്ധ്യമൻ - സ്ത്രീലിംഗം (Second Person Feminine)',
-        meaning: 'നിങ്ങൾ എല്ലാവരും',
-        grammar: 'Plural Feminine - Second Person (നിങ്ങൾ എല്ലാവരും ചെയ്യുന്നു)',
-        transliteration: 'tafa\'alna'
+        groupTitleAr: 'حاضر - مؤنث',
+        groupTitleMl: 'മദ്ധ്യമൻ - സ്ത്രീലിംഗം',
+        meaning: 'നിങ്ങൾ കുറെ സ്ത്രീകൾ പ്രവർത്തിക്കും',
+        grammar: 'جمع مؤنث حاضر',
+        transliteration: 'തഫ്അൽന'
     },
     {
         id: 13,
         arabic: 'أَفْعَلُ',
         pronoun: 'أَنَا',
         group: 5,
-        groupTitleAr: 'متكلم (First Person)',
-        groupTitleMl: 'ഉത്തമപുരുഷൻ (First Person)',
-        meaning: 'ഞാൻ',
-        grammar: 'Singular First Person (ഞാൻ ചെയ്യുന്നു)',
-        transliteration: 'af\'alu'
+        groupTitleAr: 'متكلم',
+        groupTitleMl: 'ഉത്തമപുരുഷൻ',
+        meaning: 'ഞാൻ പ്രവർത്തിക്കും',
+        grammar: 'واحدان متكلم',
+        transliteration: 'അഫ്അലു'
     },
     {
         id: 14,
         arabic: 'نَفْعَلُ',
         pronoun: 'نَحْنُ',
         group: 5,
-        groupTitleAr: 'متكلم (First Person)',
-        groupTitleMl: 'ഉത്തമപുരുഷൻ (First Person)',
-        meaning: 'ഞങ്ങൾ',
-        grammar: 'Dual/Plural First Person (ഞങ്ങൾ ചെയ്യുന്നു)',
-        transliteration: 'nafa\'alu'
+        groupTitleAr: 'متكلم',
+        groupTitleMl: 'ഉത്തമപുരുഷൻ',
+        meaning: 'ഞങ്ങൾ പ്രവർത്തിക്കും',
+        grammar: 'مثنى جمع متكلم',
+        transliteration: 'നഫ്അലു'
     }
 ];
 
 // Group metadata
 const GROUPS = [
-    { id: 1, ar: 'غائب - مذكر', ml: 'പരോക്ഷം - പുല്ലിംഗം (Third Person Masculine)' },
-    { id: 2, ar: 'غائب - مؤنث', ml: 'പരോക്ഷം - സ്ത്രീലിംഗം (Third Person Feminine)' },
-    { id: 3, ar: 'حاضر - مذكر', ml: 'മദ്ധ്യമൻ - പുല്ലിംഗം (Second Person Masculine)' },
-    { id: 4, ar: 'حاضر - مؤنث', ml: 'മദ്ധ്യമൻ - സ്ത്രീലിംഗം (Second Person Feminine)' },
-    { id: 5, ar: 'متكلم', ml: 'ഉത്തമപുരുഷൻ (First Person)' }
+    { id: 1, ar: 'غائب - مذكر', ml: 'പരോക്ഷം - പുല്ലിംഗം' },
+    { id: 2, ar: 'غائب - مؤنث', ml: 'പരോക്ഷം - സ്ത്രീലിംഗം' },
+    { id: 3, ar: 'حاضر - مذكر', ml: 'മദ്ധ്യമൻ - പുല്ലിംഗം' },
+    { id: 4, ar: 'حاضر - مؤنث', ml: 'മദ്ധ്യമൻ - സ്ത്രീലിംഗം' },
+    { id: 5, ar: 'متكلم', ml: 'ഉത്തമപുരുഷൻ' }
 ];
 
 // Unique pairing set for memory match game (to ensure cards match exactly 1-to-1)
 const MEMORY_PAIRS = [
-    { pronoun: 'هُوَ', verb: 'يَفْعَلُ' },
-    { pronoun: 'هُمْ', verb: 'يَفْعَلُونَ' },
-    { pronoun: 'هِيَ', verb: 'تَفْعَلُ' },
-    { pronoun: 'هُنَّ', verb: 'يَفْعَلْنَ' },
-    { pronoun: 'أَنْتِ', verb: 'تَفْعَلِينَ' },
-    { pronoun: 'أَنَا', verb: 'أَفْعَلُ' }
+    { meaning: 'അവൻ ഒരു പുരുഷൻ പ്രവർത്തിക്കും', verb: 'يَفْعَلُ' },
+    { meaning: 'അവർ കുറെ പുരുഷന്മാർ പ്രവർത്തിക്കും', verb: 'يَفْعَلُونَ' },
+    { meaning: 'അവൾ ഒരു സ്ത്രീ പ്രവർത്തിക്കും', verb: 'تَفْعَلُ' },
+    { meaning: 'അവർ കുറെ സ്ത്രീകൾ പ്രവർത്തിക്കും', verb: 'يَفْعَلْنَ' },
+    { meaning: 'നീ ഒരു സ്ത്രീ പ്രവർത്തിക്കും', verb: 'تَفْعَلِينَ' },
+    { meaning: 'ഞാൻ പ്രവർത്തിക്കും', verb: 'أَفْعَلُ' }
 ];
 
 // --------------------------------------------------------------------
@@ -312,7 +312,7 @@ function speakArabic(text) {
         utterance.pitch = 1.1; // friendly slightly higher pitch
         window.speechSynthesis.speak(utterance);
     } else {
-        alert("Your browser does not support Speech Pronunciation.");
+        alert("ശബ്ദം കേൾപ്പിക്കുന്ന സംവിധാനം ഈ ബ്രൗസറിൽ ലഭ്യമല്ല.");
     }
 }
 
@@ -442,7 +442,7 @@ function updateStatsDisplay() {
     
     // Update game selection cards' high scores
     for (let i = 1; i <= 5; i++) {
-        document.getElementById(`g${i}-high`).innerText = `High: ${state.highScores['g' + i]}`;
+        document.getElementById(`g${i}-high`).innerText = `മികച്ച സ്കോർ: ${state.highScores['g' + i]}`;
     }
 }
 
@@ -459,11 +459,11 @@ function evaluateBadges() {
         triggerBadgeUnlockEffect('badge-beginner', 'مُبْتَدِئٌ', 'തുടക്കക്കാരൻ ബാഡ്ജ്!');
     }
 
-    // 2. Pronoun Master (Match pronoun high score >= 100)
+    // 2. Meaning Master (Match meaning high score >= 100)
     if (state.highScores.g1 >= 100 && !state.unlockedBadges.includes('pronoun')) {
         state.unlockedBadges.push('pronoun');
         unlockedAny = true;
-        triggerBadgeUnlockEffect('badge-pronoun', 'مُتَقِنُ الضَّمَائِرِ', 'പ്രൊനൗൺ മാസ്റ്റർ ബാഡ്ജ്!');
+        triggerBadgeUnlockEffect('badge-pronoun', 'مُتَقِنُ الْمَعَانِي', 'അർത്ഥ മാസ്റ്റർ ബാഡ്ജ്!');
     }
 
     // 3. Mudhari Champion (Speed challenge score >= 100 OR Balloon Pop score >= 100)
@@ -485,7 +485,7 @@ function evaluateBadges() {
         const badgeEl = document.getElementById(`badge-${badgeId}`);
         if (badgeEl) {
             badgeEl.classList.add('unlocked');
-            badgeEl.querySelector('.badge-status').innerText = 'Unlocked';
+            badgeEl.querySelector('.badge-status').innerText = 'ലഭിച്ചു';
         }
     });
 
@@ -581,7 +581,6 @@ function renderStudyView() {
                         <span class="meaning-desc malayalam-font">${verb.grammar}</span>
                     </div>
                     <div class="verb-arabic-col">
-                        <span class="pronoun-badge">${verb.pronoun}</span>
                         <span class="arabic-font">${verb.arabic}</span>
                     </div>
                     <div class="audio-btn-wrapper">
@@ -678,7 +677,6 @@ document.getElementById('fc-btn-speak').addEventListener('click', (e) => {
 
 function updateFlashcard() {
     const verb = VERB_DATA[flashcardIndex];
-    document.getElementById('card-front-pronoun').innerText = verb.pronoun;
     document.getElementById('card-front-arabic').innerText = verb.arabic;
     document.getElementById('card-back-meaning').innerText = verb.meaning;
     document.getElementById('card-back-grammar').innerText = verb.grammar;
@@ -723,7 +721,6 @@ function loadNextRevealWord() {
 
 function updateRevealCard() {
     const verb = VERB_DATA[revealIndex];
-    document.getElementById('reveal-pronoun').innerText = verb.pronoun;
     document.getElementById('reveal-arabic').innerText = verb.arabic;
     document.getElementById('reveal-meaning').innerText = verb.meaning;
 }
@@ -869,7 +866,7 @@ function launchGame(gameId) {
     
     // Set titles
     const gameTitles = {
-        1: "പ്രൊനൗൺ മാച്ചിങ്",
+        1: "അർത്ഥ പൊരുത്തം",
         2: "മൾട്ടിപ്പിൾ ചോയ്സ് ക്വിസ്",
         3: "ബലൂൺ പോപ്പ്",
         4: "സ്പീഡ് ചലഞ്ച്",
@@ -935,13 +932,13 @@ function shuffle(array) {
 // --------------------------------------------------------------------
 // GAME 1: Match the Pronoun (Connecting Pairs)
 // --------------------------------------------------------------------
-let g1SelectedPronoun = null;
+let g1SelectedMeaning = null;
 let g1SelectedVerb = null;
 
 function startGame1() {
     gameWorkspace.innerHTML = `
         <div class="match-instruction malayalam-font">
-            ഇടതുവശത്തെ സർവ്വനാമവും (Pronoun) വലതുവശത്തെ ശരിയായ ക്രിയാരൂപവും (Verb) ജോടിയാക്കുക!
+            ഇടതുവശത്തെ അർത്ഥവും വലതുവശത്തെ ശരിയായ ക്രിയാരൂപവും ജോടിയാക്കുക!
         </div>
         <div class="match-game-cols">
             <div class="match-col match-col-pronouns" id="g1-pronoun-col"></div>
@@ -952,19 +949,20 @@ function startGame1() {
     // Choose 6 random verbs
     const selectedVerbs = shuffle(VERB_DATA).slice(0, 6);
     
-    // Generate left side (Pronouns) and right side (Verbs)
-    const shuffledPronouns = shuffle(selectedVerbs);
+    // Generate left side (Meanings) and right side (Verbs)
+    const shuffledMeanings = shuffle(selectedVerbs);
     const shuffledVerbs = shuffle(selectedVerbs);
     
     const pCol = document.getElementById('g1-pronoun-col');
     const vCol = document.getElementById('g1-verb-col');
     
-    shuffledPronouns.forEach(v => {
+    shuffledMeanings.forEach(v => {
         const el = document.createElement('div');
-        el.className = 'match-item';
-        el.innerText = v.pronoun;
+        el.className = 'match-item malayalam-font';
+        el.style.fontSize = '0.82rem';
+        el.innerText = v.meaning;
         el.setAttribute('data-id', v.id);
-        el.addEventListener('click', () => handleG1Click('pronoun', el));
+        el.addEventListener('click', () => handleG1Click('meaning', el));
         pCol.appendChild(el);
     });
     
@@ -981,14 +979,14 @@ function startGame1() {
 function handleG1Click(type, element) {
     SoundFX.playClick();
     
-    if (type === 'pronoun') {
+    if (type === 'meaning') {
         const parent = element.parentNode;
         parent.querySelectorAll('.match-item').forEach(c => c.classList.remove('selected'));
         
-        if (g1SelectedPronoun === element) {
-            g1SelectedPronoun = null;
+        if (g1SelectedMeaning === element) {
+            g1SelectedMeaning = null;
         } else {
-            g1SelectedPronoun = element;
+            g1SelectedMeaning = element;
             element.classList.add('selected');
         }
     } else {
@@ -1004,18 +1002,18 @@ function handleG1Click(type, element) {
     }
     
     // Check if we have a pair selected
-    if (g1SelectedPronoun && g1SelectedVerb) {
-        const id1 = g1SelectedPronoun.getAttribute('data-id');
+    if (g1SelectedMeaning && g1SelectedVerb) {
+        const id1 = g1SelectedMeaning.getAttribute('data-id');
         const id2 = g1SelectedVerb.getAttribute('data-id');
         
-        const currentP = g1SelectedPronoun;
+        const currentM = g1SelectedMeaning;
         const currentV = g1SelectedVerb;
         
         if (id1 === id2) {
             // Match success!
             setTimeout(() => {
                 SoundFX.playCorrect();
-                currentP.className = 'match-item matched';
+                currentM.className = 'match-item matched malayalam-font';
                 currentV.className = 'match-item matched';
                 
                 gameScore += 20;
@@ -1033,20 +1031,20 @@ function handleG1Click(type, element) {
             // Mismatch
             setTimeout(() => {
                 SoundFX.playWrong();
-                currentP.className = 'match-item mismatch';
+                currentM.className = 'match-item mismatch malayalam-font';
                 currentV.className = 'match-item mismatch';
                 
                 gameScore = Math.max(0, gameScore - 5);
                 document.getElementById('game-score-count').innerText = gameScore;
                 
                 setTimeout(() => {
-                    currentP.className = 'match-item';
+                    currentM.className = 'match-item malayalam-font';
                     currentV.className = 'match-item';
                 }, 800);
             }, 200);
         }
         
-        g1SelectedPronoun = null;
+        g1SelectedMeaning = null;
         g1SelectedVerb = null;
     }
 }
@@ -1205,7 +1203,7 @@ function selectG3Target() {
     
     const banner = document.getElementById('g3-target-bar');
     if (banner) {
-        banner.innerHTML = `ശരിയായ ബലൂൺ അടിക്കുക: <br><span class="arabic-font">${g3TargetVerb.pronoun}</span> ➔ ( ${g3TargetVerb.meaning} )`;
+        banner.innerHTML = `ശരിയായ ബലൂൺ അടിക്കുക: <br>( ${g3TargetVerb.meaning} )`;
     }
 }
 
@@ -1341,7 +1339,7 @@ function startGame4() {
     gameWorkspace.innerHTML = `
         <div class="speed-bar-container">
             <span class="speed-timer malayalam-font">
-                ⏱️ <span id="g4-timer-seconds">60s</span>
+                ⏱️ <span id="g4-timer-seconds">60</span>
             </span>
             <div class="speed-timer-progress">
                 <div class="speed-timer-fill" id="g4-timer-bar"></div>
@@ -1349,7 +1347,7 @@ function startGame4() {
         </div>
         <div class="speed-challenge-card">
             <span class="speed-prompt-desc malayalam-font">അർത്ഥം:</span>
-            <span class="speed-prompt-meaning malayalam-font" id="g4-prompt">ഏകവചനം പുല്ലിംഗം (അവൻ)</span>
+            <span class="speed-prompt-meaning malayalam-font" id="g4-prompt">അവൻ ഒരു പുരുഷൻ പ്രവർത്തിക്കും</span>
         </div>
         <div class="speed-answers-grid" id="g4-buttons-grid"></div>
     `;
@@ -1363,7 +1361,7 @@ function startGame4() {
     
     game4Timer = setInterval(() => {
         game4SecondsLeft--;
-        timerLabel.innerText = `${game4SecondsLeft}s`;
+        timerLabel.innerText = `${game4SecondsLeft}`;
         
         const pct = (game4SecondsLeft / 60) * 100;
         fillBar.style.width = `${pct}%`;
@@ -1437,7 +1435,7 @@ let g5StartTime = 0;
 function startGame5() {
     gameWorkspace.innerHTML = `
         <div class="match-instruction malayalam-font" id="g5-timer-banner">
-            കാർഡുകൾ മറിച്ചു നോക്കി സർവ്വനാമങ്ങളുടെയും (Pronoun) അവയ്ക്ക് അനുയോജ്യമായ ക്രിയകളുടെയും (Verb) ജോഡികൾ പൊരുത്തപ്പെടുത്തുക!
+            കാർഡുകൾ മറിച്ചു നോക്കി ക്രിയകളും അവയുടെ അർത്ഥങ്ങളും തമ്മിലുള്ള ജോഡികൾ പൊരുത്തപ്പെടുത്തുക!
         </div>
         <div class="memory-grid" id="g5-grid"></div>
     `;
@@ -1446,12 +1444,12 @@ function startGame5() {
     g5MatchedCount = 0;
     g5StartTime = Date.now();
     
-    // Build deck of cards (6 pronouns, 6 matching verbs)
+    // Build deck of cards (6 meanings, 6 matching verbs)
     const deck = [];
     MEMORY_PAIRS.forEach((pair, index) => {
         deck.push({
-            type: 'pronoun',
-            text: pair.pronoun,
+            type: 'meaning',
+            text: pair.meaning,
             pairIndex: index
         });
         deck.push({
@@ -1469,12 +1467,13 @@ function startGame5() {
         card.className = 'memory-card';
         card.setAttribute('data-idx', idx);
         
+        const isMeaning = cardData.type === 'meaning';
         card.innerHTML = `
             <div class="memory-card-inner">
                 <div class="memory-card-front">
                     <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/></svg>
-                </div>
-                <div class="memory-card-back ${cardData.type}">
+                  </div>
+                <div class="memory-card-back ${cardData.type} ${isMeaning ? 'malayalam-font' : ''}">
                     ${cardData.text}
                 </div>
             </div>
@@ -1558,7 +1557,7 @@ document.getElementById('btn-reset-data').addEventListener('click', () => {
         // Remove unlocked classes from UI elements
         document.querySelectorAll('.badge-card').forEach(card => {
             card.classList.remove('unlocked');
-            card.querySelector('.badge-status').innerText = 'Locked';
+            card.querySelector('.badge-status').innerText = 'ലഭിച്ചിട്ടില്ല';
         });
         
         SoundFX.playWrong();
