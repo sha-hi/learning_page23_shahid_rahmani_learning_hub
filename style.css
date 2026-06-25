@@ -145,6 +145,32 @@ header {
     transition: var(--transition);
 }
 
+.lrs-btn {
+    background: rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 50px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    box-shadow: var(--shadow-sm);
+}
+
+.lrs-btn:hover {
+    background: rgba(255, 255, 255, 0.28);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-1px);
+}
+
+.lrs-btn:active {
+    transform: translateY(0);
+}
+
 .stat-item.stars {
     background: rgba(212, 160, 23, 0.2);
     border-color: rgba(212, 160, 23, 0.4);

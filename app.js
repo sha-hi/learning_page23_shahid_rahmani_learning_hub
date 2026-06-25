@@ -1482,6 +1482,14 @@ document.getElementById('btn-reset-data').addEventListener('click', () => {
 // --------------------------------------------------------------------
 // 13. Application Entrypoint / Bootloader
 // --------------------------------------------------------------------
+// --------------------------------------------------------------------
+// 14. LRS Learning Online Hub Interaction
+// --------------------------------------------------------------------
+document.getElementById('btn-lrs-hub').addEventListener('click', () => {
+    SoundFX.playWrong();
+    alert('Locked 🔒');
+});
+
 window.addEventListener('DOMContentLoaded', () => {
     // Initializing state
     loadState();
