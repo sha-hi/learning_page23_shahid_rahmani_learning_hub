@@ -56,7 +56,7 @@ const VERB_DATA = [
         group: 2,
         groupTitleAr: 'مؤنث',
         groupTitleMl: '',
-        meaning: 'അവർ രണ്ടുപേരെ പോയി (സ്ത്രീകൾ )',
+        meaning: 'അവർ രണ്ടുപേർ പോയി (സ്ത്രീകൾ)',
         grammar: '',
         transliteration: 'തദ്ഹബാനി'
     },
@@ -88,7 +88,7 @@ const MEMORY_PAIRS = [
     { meaning: 'അവർ രണ്ടുപേർ പോയി (പുരുഷന്മാർ )', verb: 'يَذْهَبَانِ' },
     { meaning: 'അവർ അനേകം പേർ പോയി (പുരുഷന്മാർ )', verb: 'يَذْهَبُونَ' },
     { meaning: 'അവൾ പോയി (സ്ത്രീ)', verb: 'تَذْهَبُ' },
-    { meaning: 'അവർ രണ്ടുപേരെ പോയി (സ്ത്രീകൾ )', verb: 'تَذْهَبَانِ' },
+    { meaning: 'അവർ രണ്ടുപേർ പോയി (സ്ത്രീകൾ)', verb: 'تَذْهَبَانِ' },
     { meaning: 'അവർ അനേകം പേർ പോയി (സ്ത്രീകൾ )', verb: 'يَذْهَبْنَ' }
 ];
 
@@ -560,6 +560,41 @@ function renderStudyView() {
 }
 
 // --------------------------------------------------------------------
+// 8B. Study 2 Mode Operations
+// --------------------------------------------------------------------
+function renderStudy2View() {
+    const container = document.getElementById('study2-grid');
+    if (!container) return;
+    container.innerHTML = '';
+    
+    VERB_DATA.forEach(verb => {
+        const card = document.createElement('div');
+        card.className = 'study2-card';
+        card.innerHTML = `
+            <span class="card-arabic arabic-font">${verb.arabic}</span>
+            <span class="card-meaning malayalam-font">${verb.meaning}</span>
+        `;
+        
+        card.addEventListener('click', () => {
+            SoundFX.playClick();
+            card.classList.toggle('show-meaning');
+            
+            // Save reading progress
+            if (card.classList.contains('show-meaning')) {
+                if (!state.readVerbs.includes(verb.id)) {
+                    state.readVerbs.push(verb.id);
+                    state.stars += 2; // Reward stars for studying!
+                    saveState();
+                    updateStatsDisplay();
+                }
+            }
+        });
+        
+        container.appendChild(card);
+    });
+}
+
+// --------------------------------------------------------------------
 // 9. Practice View Operations
 // --------------------------------------------------------------------
 let flashcardIndex = 0;
@@ -764,11 +799,86 @@ document.getElementById('results-btn-done').addEventListener('click', () => {
     exitGame();
 });
 
+// --------------------------------------------------------------------
+// Game Verb Templates (Random verbs: play, jump, hide, run, eat, study, go)
+// --------------------------------------------------------------------
+const VERB_TEMPLATES = [
+    {
+        verb: 'يَذْهَبُ',
+        baseMeaning: 'പോകുന്നു',
+        forms: ['يَذْهَبُ', 'يَذْهَبَانِ', 'يَذْهَبُونَ', 'تَذْهَبُ', 'تَذْهَبَانِ', 'يَذْهَبْنَ']
+    },
+    {
+        verb: 'يَلْعَبُ',
+        baseMeaning: 'കളിക്കുന്നു',
+        forms: ['يَلْعَبُ', 'يَلْعَبَانِ', 'يَلْعَبُونَ', 'تَلْعَبُ', 'تَلْعَبَانِ', 'يَلْعَبْنَ']
+    },
+    {
+        verb: 'يَقْفِزُ',
+        baseMeaning: 'ചാടുന്നു',
+        forms: ['يَقْفِزُ', 'يَقْفِزَانِ', 'يَقْفِزُونَ', 'تَقْفِزُ', 'تَقْفِزَانِ', 'يَقْفِزْنَ']
+    },
+    {
+        verb: 'يَخْتَبِئُ',
+        baseMeaning: 'ഒളിക്കുന്നു',
+        forms: ['يَخْتَبِئُ', 'يَخْتَبِئَانِ', 'يَخْتَبِئُونَ', 'تَخْتَبِئُ', 'تَخْتَبِئَانِ', 'يَخْتَبِئْنَ']
+    },
+    {
+        verb: 'يَجْرِي',
+        baseMeaning: 'ഓടുന്നു',
+        forms: ['يَجْرِي', 'يَجْرِيَانِ', 'يَجْرُونَ', 'تَجْرِي', 'تَجْرِيَانِ', 'يَجْرِينَ']
+    },
+    {
+        verb: 'يَأْكُلُ',
+        baseMeaning: 'തിന്നുന്നു',
+        forms: ['يَأْكُلُ', 'يَأْكُلَانِ', 'يَأْكُلُونَ', 'تَأْكُلُ', 'تَأْكُلَانِ', 'يَأْكُلْنَ']
+    },
+    {
+        verb: 'يَدْرُسُ',
+        baseMeaning: 'പഠിക്കുന്നു',
+        forms: ['يَدْرُسُ', 'يَدْرُسَانِ', 'يَدْرُسُونَ', 'تَدْرُسُ', 'تَدْرُسَانِ', 'يَدْرُسْنَ']
+    }
+];
+
+const PRONOUN_FORMS = [
+    { id: 1, pronoun: 'هُوَ', meaning: 'അവൻ' },
+    { id: 2, pronoun: 'هُما (مذكر)', meaning: 'അവർ രണ്ടുപേർ (പുരുഷന്മാർ)' },
+    { id: 3, pronoun: 'هُمْ', meaning: 'അവർ (പുരുഷന്മാർ)' },
+    { id: 4, pronoun: 'هِيَ', meaning: 'അവൾ' },
+    { id: 5, pronoun: 'هُما (مؤنث)', meaning: 'അവർ രണ്ടുപേർ (സ്ത്രീകൾ)' },
+    { id: 6, pronoun: 'هُنَّ', meaning: 'അവർ (സ്ത്രീകൾ)' }
+];
+
+let currentGameData = [];
+let currentMemoryPairs = [];
+
 function launchGame(gameId) {
     activeGameId = gameId;
     gameScore = 0;
     gameCorrectAnswers = 0;
     gameTotalQuestions = 0;
+    
+    // Choose a random verb template
+    const template = VERB_TEMPLATES[Math.floor(Math.random() * VERB_TEMPLATES.length)];
+    
+    // Generate game dataset dynamically
+    currentGameData = PRONOUN_FORMS.map((p, index) => {
+        return {
+            id: p.id,
+            arabic: `${template.forms[index]} <span class="game-verb-clue malayalam-font">(${template.baseMeaning})</span>`,
+            rawArabic: template.forms[index],
+            pronoun: p.pronoun,
+            meaning: p.meaning,
+            grammar: ''
+        };
+    });
+    
+    currentMemoryPairs = currentGameData.map(item => {
+        return {
+            meaning: item.meaning,
+            verb: item.arabic
+        };
+    });
     
     // Reset views inside overlay
     gameWorkspace.style.display = 'flex';
@@ -783,7 +893,11 @@ function launchGame(gameId) {
         4: "സ്പീഡ് ചലഞ്ച്",
         5: "മെമ്മറി മാച്ച്"
     };
-    document.getElementById('game-title-display').innerText = gameTitles[gameId];
+    if (gameId === 3) {
+        document.getElementById('game-title-display').innerText = gameTitles[gameId];
+    } else {
+        document.getElementById('game-title-display').innerText = `${gameTitles[gameId]} (${template.verb} - ${template.baseMeaning})`;
+    }
     
     // Activate overlay
     gameOverlay.classList.add('active');
@@ -858,7 +972,7 @@ function startGame1() {
     `;
     
     // Choose 6 random verbs
-    const selectedVerbs = shuffle(VERB_DATA).slice(0, 6);
+    const selectedVerbs = shuffle(currentGameData).slice(0, 6);
     
     // Generate left side (Meanings) and right side (Verbs)
     const shuffledMeanings = shuffle(selectedVerbs);
@@ -880,7 +994,7 @@ function startGame1() {
     shuffledVerbs.forEach(v => {
         const el = document.createElement('div');
         el.className = 'match-item';
-        el.innerText = v.arabic;
+        el.innerHTML = v.arabic;
         el.setAttribute('data-id', v.id);
         el.addEventListener('click', () => handleG1Click('verb', el));
         vCol.appendChild(el);
@@ -971,12 +1085,12 @@ function startGame2() {
     g2CurrentIndex = 0;
     
     // Generate 10 random questions
-    const pool = shuffle(VERB_DATA);
+    const pool = shuffle(currentGameData);
     for (let i = 0; i < 10; i++) {
         const verb = pool[i % pool.length];
         
         // Generate options (1 correct, 2 distractors)
-        const distractors = shuffle(VERB_DATA.filter(v => v.id !== verb.id)).slice(0, 2);
+        const distractors = shuffle(currentGameData.filter(v => v.id !== verb.id)).slice(0, 2);
         const options = shuffle([verb, ...distractors]);
         
         g2Questions.push({
@@ -1022,6 +1136,7 @@ function loadG2Question() {
     qData.options.forEach((opt, index) => {
         const btn = document.createElement('div');
         btn.className = 'mcq-option';
+        btn.setAttribute('data-id', opt.id);
         btn.innerHTML = `
             <span class="mcq-option-letter">${letters[index]}</span>
             <span class="mcq-option-text">${opt.arabic}</span>
@@ -1050,8 +1165,8 @@ function handleG2Selection(selectedBtn, isCorrect) {
         // Find and highlight correct answer
         const qData = g2Questions[g2CurrentIndex];
         options.forEach(btn => {
-            const text = btn.querySelector('.mcq-option-text').innerText;
-            if (text === qData.verb.arabic) {
+            const optId = parseInt(btn.getAttribute('data-id'));
+            if (optId === qData.verb.id) {
                 btn.classList.add('correct');
             }
         });
@@ -1286,11 +1401,11 @@ function startGame4() {
 }
 
 function loadG4Question() {
-    g4CurrentTarget = shuffle(VERB_DATA)[0];
+    g4CurrentTarget = shuffle(currentGameData)[0];
     document.getElementById('g4-prompt').innerText = g4CurrentTarget.meaning;
     
     // Generate answers (1 correct, 3 distractors)
-    const pool = shuffle(VERB_DATA.filter(v => v.id !== g4CurrentTarget.id));
+    const pool = shuffle(currentGameData.filter(v => v.id !== g4CurrentTarget.id));
     const dist = pool.slice(0, 3);
     const options = shuffle([g4CurrentTarget, ...dist]);
     
@@ -1300,7 +1415,8 @@ function loadG4Question() {
     options.forEach(opt => {
         const btn = document.createElement('button');
         btn.className = 'speed-answer-btn';
-        btn.innerText = opt.arabic;
+        btn.setAttribute('data-id', opt.id);
+        btn.innerHTML = opt.arabic;
         btn.addEventListener('click', () => handleG4Click(btn, opt.id === g4CurrentTarget.id));
         grid.appendChild(btn);
     });
@@ -1322,7 +1438,8 @@ function handleG4Click(btn, isCorrect) {
         
         // Find correct and show green
         btns.forEach(b => {
-            if (b.innerText === g4CurrentTarget.arabic) {
+            const optId = parseInt(b.getAttribute('data-id'));
+            if (optId === g4CurrentTarget.id) {
                 b.classList.add('correct');
             }
         });
@@ -1357,7 +1474,7 @@ function startGame5() {
     
     // Build deck of cards (6 meanings, 6 matching verbs)
     const deck = [];
-    MEMORY_PAIRS.forEach((pair, index) => {
+    currentMemoryPairs.forEach((pair, index) => {
         deck.push({
             type: 'meaning',
             text: pair.meaning,
@@ -1474,6 +1591,7 @@ document.getElementById('btn-reset-data').addEventListener('click', () => {
         SoundFX.playWrong();
         updateStatsDisplay();
         renderStudyView();
+        renderStudy2View();
         
         alert("പഠന ഡാറ്റ വിജയകരമായി മായ്ച്ചിരിക്കുന്നു!");
     }
@@ -1496,6 +1614,7 @@ window.addEventListener('DOMContentLoaded', () => {
     
     // Render initial views
     renderStudyView();
+    renderStudy2View();
     initTabNavigation();
     
     // Prep Confetti

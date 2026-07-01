@@ -41,6 +41,12 @@
                 </svg>
                 <span class="malayalam-font">പഠിക്കാം</span>
             </button>
+            <button class="tab-btn" data-tab="study2" id="tab-btn-study2">
+                <svg viewBox="0 0 24 24">
+                    <path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12z"/>
+                </svg>
+                <span class="malayalam-font">പഠിക്കാം 2</span>
+            </button>
             <button class="tab-btn" data-tab="practice" id="tab-btn-practice">
                 <svg viewBox="0 0 24 24">
                     <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
@@ -71,6 +77,17 @@
                 </div>
                 
                 <div class="study-groups-container" id="study-groups-list">
+                    <!-- Dynamic rendering via app.js -->
+                </div>
+            </div>
+
+            <!-- Section 1B: Study 2 Mode -->
+            <div id="study2-view" class="view-section">
+                <div class="study-intro malayalam-font">
+                    തൊട്ടു പഠിക്കാം!
+                </div>
+                
+                <div class="study2-grid-container" id="study2-grid">
                     <!-- Dynamic rendering via app.js -->
                 </div>
             </div>
